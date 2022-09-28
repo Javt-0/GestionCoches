@@ -66,9 +66,26 @@ public class Vehiculo {
         this.disponible = disponible;
     }
 
+    public Vehiculo() {
+        
+    }
+
+    public Vehiculo(String matricula) {
+        this.matricula = matricula;
+    }
+
     @Override
     public String toString() {
-        return "Vehiculo{" + "matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", tarifa=" + tarifa + ", disponible=" + disponible + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Vehiculo{");
+        sb.append("matricula=").append(matricula);
+        sb.append(", marca=").append(marca);
+        sb.append(", modelo=").append(modelo);
+        sb.append(", color=").append(color);
+        sb.append(", tarifa=").append(tarifa);
+        sb.append(", disponible=").append(disponible);
+        sb.append('}');
+        return sb.toString();
     }
     
     
